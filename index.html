@@ -1,0 +1,1636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.cdnfonts.com/css/gg-sans-2" rel="stylesheet">
+
+    <!-- font-family: 'gg sans', sans-serif; -->
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/gg-sans-2');
+
+
+
+        .smallRobot{
+            animation: robomove infinite 3s ease-in preserve ;
+        }
+        @keyframes robomove {
+            0% { transform: translatey(0); }
+            100% { transform: translatey(100px); }
+           
+        }
+            
+
+
+        /* Bg bulb animation */
+
+        .bgBulb{
+            animation:bulbmove infinite 8s ease alternate-reverse ;
+        }
+        @keyframes bulbmove {
+            0%{
+                transform: rotate(60deg) scale(100%);
+            }
+            100%{
+                transform: rotate(270deg) scale(30%);
+                transform: translate3d(30);
+            }
+        }
+
+        .crown{
+            animation:crown infinite 3s ease alternate-reverse ;
+        }
+        @keyframes crown {
+            0%{
+                transform: rotate(10deg);
+            }
+            100%{
+                transform: -rotate(40deg);
+                transform: translate3d(30);
+            }
+        }
+
+        .trophy{
+            animation:trophy infinite 3s ease alternate-reverse ;
+        }
+        @keyframes trophy {
+            0%{
+               
+                transform:  translateX(0px);
+            }
+            100%{
+               
+                transform: translateX(60px);
+                transform: translate3d(30);
+            }
+        }
+
+        .leftbigstar{
+            animation:leftbigstar infinite 6s ease alternate-reverse ;
+        }
+        @keyframes leftbigstar {
+            0%{
+               
+                transform:  translatey(0px);
+            }
+            100%{
+               
+                transform: translatey(150px);
+                transform: translate3d(30);
+            }
+
+             
+        }
+
+        .topfruit1{
+            animation:topfruit1 infinite 6s ease alternate-reverse ;
+            opacity: 50%;
+
+        }
+        @keyframes topfruit1 {
+            0% { transform: translateX(0px); }
+          50%  { transform: translateX(45px); }
+        100%   { transform: translateX(-0px); }  
+        }
+
+        .herosection2{
+            border-radius: 50px;
+           
+        }
+        
+       
+        .cartoonBoy{
+            animation: cartoonBoy infinite 6s alternate-reverse;
+        }
+        @keyframes cartoonBoy {
+            0% {
+                transform: translateX(0px);
+            }
+            50%{
+                transform: translateX(100px);
+            }
+        }
+
+        .logos{
+
+           overflow: hidden;
+        }
+
+        .logos-slide{
+            animation: slide 10s infinite linear;
+        }
+        .logos::before,.logos::after{
+            position: absolute;
+            content: "";
+            z-index: 2;
+        }
+        @keyframes slide {
+            from{
+                transform: translateX(10%);
+            }
+            to{
+                transform: translateX(100%);
+            }
+            
+        }
+        
+
+        .smallstar1{
+            animation: smallstar1 infinite 6s ease-in-out alternate-reverse ;
+        }
+        @keyframes smallstar1 {
+            0%{
+    
+                opacity: 0;
+        }
+        20%{
+            opacity: 100%;
+        }
+
+        60%{
+            opacity: 0;
+
+        }
+
+        100%{
+            opacity: 100%;
+
+        }
+        }
+
+        .smallstar{
+            animation: smallstar infinite 16s ease-in-out alternate-reverse ;
+        }
+        @keyframes smallstar {
+
+        20%{
+            opacity: 0%;
+        }
+
+        60%{
+            opacity: 40%;
+
+        }
+
+        80%{
+            opacity: 80%;
+
+        }
+
+        80%{
+            opacity: 100%;
+
+        }
+
+        }
+
+        .smallstar2{
+            animation: smallstar infinite 8s ease-in-out alternate-reverse ;
+        }
+        @keyframes smallstar {
+
+        20%{
+            transform: rotateX('0');
+            opacity: 0%;
+        }
+
+        60%{
+            opacity: 40%;
+            transform: rotateX('128');
+
+        }
+
+        80%{
+            transform: rotateX('270');
+            opacity: 100%;
+
+        }
+
+        }
+
+        /* second section football  */
+
+        body{
+            font-family: 'gg sans', sans-serif;
+
+        }
+        .section2{
+        
+            position: relative;
+            transform-style: preserve-3d;
+            transform: translateZ(0px);
+
+        }
+        .hs2div{
+            z-index:20;
+            border-radius: 50px;
+            background: #d5e8bb; 
+            perspective: 20px;
+
+        }
+        .hs2cb{
+            z-index:20;
+            transform: translateZ(-100px) scale(20px);
+           
+        }
+        .football{
+            z-index:-30;
+            position: absolute;
+            transform: translateZ(100px) scale(20px);
+        }
+
+        
+
+        
+        
+        
+       
+
+       
+
+
+    </style>
+</head>
+<body class="bg-gradient-to-b from-sky-600 to-blue-900 overflow-x-hidden ">
+    <!-- Navigation Bar -->
+     <nav class=" w-full relative mt-8">
+        <div class="w-[1180px] relative mx-auto items-center">
+           
+
+            <ul class="flex w-full mx-auto justify-center space-x-9">
+
+                <!-- item-1 -->
+                <li>
+                    <img src="/images/Small main ds logo.svg" alt="" width="130px" height="130px"
+                    class="absolute lg:left-0 -top-2 md:left-20 ">
+                </li>
+
+                <!-- item-2 -->
+
+                <li class="text-white hidden lg:block font-bold hover:underline cursor-pointer">
+                    <a href="#">Download</a>
+                </li>
+
+                <!-- item-3 -->
+
+                <li class="text-white font-bold hover:underline cursor-pointer  hidden lg:block">
+                    <a href="#">Nitro</a>
+                </li>
+
+                <!-- item-4 -->
+
+                <li class="text-white font-bold  hidden lg:block hover:underline cursor-pointer">
+                    <a href="#">Discover</a>
+
+                </li>
+
+                <li class="text-white font-bold hover:underline cursor-pointer  hidden lg:block"><a href="#">Support</a>
+                </li>
+
+                <!-- item-5 -->
+                
+                <li class="text-white font-bold hover:underline cursor-pointer  hidden lg:block">
+                    <a href="#">Safety</a>
+                </li>
+
+                <!-- item-6 -->
+
+                <li class="text-white font-bold hover:underline cursor-pointer  hidden lg:block"> 
+                    <a href="#">Blog</a>
+                </li>
+
+                
+                <li class="text-white font-bold hover:underline cursor-pointer  hidden lg:block">
+                    <a href="#">Carrers</a></li>
+                <li>
+                    <button class="absolute lg:right-0 md:right-20 rounded-3xl bg-white text-black font-medium font-sans w-[68px] p-[9px] text-[16px] hover:text-blue-800 -top-2">Login</button>
+                </li>
+                
+                    
+        </ul>
+           
+
+        </div>
+     </nav>
+
+     <!-- hero section 1 -->
+      <section class="relative w-full mt-28 ">
+        <div class="w-9/12 flex flex-col lg:flex-row  relative mx-auto items-center pt-10 gap-8  ">
+            <!-- bulb -->
+            <img src="images/image_6.webp" alt="" width="100px" class="absolute self-start -left-24 -top-1 hidden lg:block rotate-45 bgBulb">
+            <!-- crown -->
+            <img src="images/image_7.webp" alt="" width="200px" class="absolute left-8 -top-24 crown">
+
+            <!-- trophy -->
+            <img src="images/image_8.webp" alt="" width="140px" class="absolute -top-14 left-80 trophy ">
+
+            <!-- topfruit1 -->
+
+            <img src="images/image_9.webp" alt="" width="60px" class="absolute -top-20 right-36 topfruit1">
+
+            <!-- leftbigstar -->
+             <img src="images/image_10.webp" alt="" width="150px" class="absolute -right-32 -top-20 leftbigstar">
+
+             <!-- smallstar -->
+              <img src="images/image_17.svg" alt="" class="absolute top-0 left-0 smallstar">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute top-28 left-20 smallstar1">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute top-60 -left-20 smallstar">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute top-20 -left-32 smallstar1">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute -top-24 -left-28 smallstar1">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute -top-24 left-64 smallstar">
+
+
+
+               <!-- smallstar -->
+              <img src="images/image_25.svg" alt="" class="absolute smallstar -top-12 left-96">
+
+              <!-- smallstar -->
+              <img src="images/image_25.svg" alt="" class="absolute smallstar1 top-56 left-56">
+
+               <!-- smallstar -->
+              <img src="images/image_26.svg" alt="" class="absolute top-0 left-80 smallstar">
+
+
+               <!-- smallstar -->
+              <img src="images/image_27.svg" alt="" class="absolute top-0 left-52 smallstar1">
+
+
+
+              <!-- Right stars -->
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute top-0 right-0-0 smallstar1">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute -top-5 -right-20 smallstar1">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute top-60 -right-20 smallstar">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute top-20 -right-32 smallstar1">
+
+
+    <!-- center stars and small -->
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute left-0 right-0 mx-auto smallstar2">
+
+              <!-- smallstar -->
+              <img src="images/image_27.svg" alt="" class="absolute top-0 right-0 left-0 mx-auto smallstar1">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute -left-32 top-0 right-0 mx-auto smallstar">
+
+              <!-- smallstar -->
+              <img src="images/image_27.svg" alt="" class="absolute top-32 right-0 left-32 mx-auto smallstar">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute left-48 top-0 right-0 mx-auto smallstar2">
+
+              <!-- smallstar -->
+              <img src="images/image_27.svg" alt="" class="absolute -top-20 right-48 left-32 mx-auto smallstar">
+
+              <!-- smallstar1 -->
+              <img src="images/image_17.svg" alt="" class="absolute left-96 top-3 right-0 mx-auto smallstar2">
+
+              <!-- smallstar -->
+              <img src="images/image_27.svg" alt="" class="absolute top-80  left-96 right-0 mx-auto smallstar2">
+
+              <!-- smallstar1 --> 
+              <img src="images/image_17.svg" alt="" class="absolute left-96 -top-20 right-0 mx-auto smallstar1">
+
+              <!-- smallstar -->
+              <img src="images/image_27.svg" alt="" class="absolute top-9 right-8 left-32 mx-auto smallstar2">
+
+
+
+
+
+
+
+            <!-- Content box -->
+
+           
+            <!-- Left part -->
+             <div class=" relative flex flex-col justify-between items-center basis-2/3">
+                <h1 class="text-white font-extrabold text-[60px] uppercase tracking-tighter z-20">
+                    Group chat that’s all fun  games
+                </h1>
+
+                <p class="text-white font-light text-[28px]">
+                    Discord is great for playing games and chilling with friends, or even building a worldwide community. Customize your own space to talk, play, and hang out.
+                </p>
+             </div>
+
+             <!-- Right part -->
+              <div class="relative">
+
+
+                <img src="images/image_13.webp" alt="" width="160px" class="absolute pt-[190px] -ml-28 -mt-16 animate-spin hidden lg:block " >
+
+                <img src="images/image_14.webp" alt="" width="70px" class="absolute smallRobot animate-bounce motion-safe:animate-bounce -ml-20 mt-2 hidden lg:block ">
+
+                <img src="" alt="">
+                <img src="images/image_11.webp" alt="" class="scale-125 pl-8">
+
+                <img src="images/image_13.webp" alt="" width="160px" class="absolute right-0  -top-6 -mr-2 hidden lg:block animate-bounce grayscale" >
+
+                <img src="images/bakihamna.png" alt="" width="160px" class="absolute hidden lg:block right-0  top-0 -mr-2"  >
+
+                <img src="" alt="">
+              </div>
+
+
+            
+            
+        </div>
+
+         <!-- Button section -->
+
+        <div class="w-9/12 relative flex mx-auto justify-center mt-32 gap-6">
+            <button class=" btn rounded-3xl bg-white p-4 text-[18px] w-[300px] font-bold cursor-pointer hover:shadow-2xl hover:shadow-black flex gap-4">
+                <img src="images/download svg.webp" class="" alt="" width="30px">
+                Download for Windows</button>
+            <button  class="rounded-3xl text-white bg-blue-800 p-4 text-[18px] w-[300px] font-bold cursor-pointer hover:shadow-2xl hover:shadow-black">Open Discord in your browser</button>
+        </div>
+      </section>
+
+      <!-- hero section 2 -->
+       <section class="relative w-full mt-80 section2">
+
+        <div class="w-[88%] flex relative items-center mx-auto hs2div p-0.5"> 
+
+             <!-- Football fixed image -->
+         <img src="images/image_40.webp"  alt="" width="400px" class="absolute z-10 -left-32 football " >
+
+            <!-- BG stars images -->
+             <div>
+                
+             <!-- smallstar -->
+             <img src="images/image_17.svg" alt="" class="absolute top-0 left-0 ">
+
+             <img src="images/image_17.svg" alt="" class="absolute -top-40 left-96 ">
+
+             <img src="images/image_17.svg" alt="" class="absolute -top-44 left-6 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute top-28 left-20 smallstar1">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute top-60 -left-20 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-60 -left-20 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-8 -left-20 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute top-20 -left-32 smallstar1">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-24 -left-28 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-24 left-64 smallstar">
+
+
+
+              <!-- smallstar -->
+             <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+
+             <!-- smallstar -->
+             <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-14 mx-auto">
+
+             <!-- smallstar -->
+             <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+
+             <!-- smallstar -->
+             <img src="images/image_25.svg" alt="" class="absolute smallstar1 top-56 left-56">
+
+              <!-- smallstar -->
+             <img src="images/image_26.svg" alt="" class="absolute top-0 left-80 smallstar">
+
+
+              <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute top-0 left-52 ">
+
+
+
+             <!-- Right stars -->
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute top-0 right-0-0 smallstar1">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-5 -right-20 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute top-60 -right-20 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute top-20 -right-32 smallstar1">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-60 right-20 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-60 -right-20 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-52 right-64 ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -top-60 right-96 ">
+
+
+
+   <!-- center stars and small -->
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute left-0 right-0 mx-auto smallstar2">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute top-0 right-0 left-0 mx-auto ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute -left-32 top-0 right-0 mx-auto smallstar">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute top-32 right-0 left-32 mx-auto ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute left-48 top-0 right-0 mx-auto smallstar2">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute -top-20 right-48 left-32 mx-auto ">
+
+             <!-- smallstar1 -->
+             <img src="images/image_17.svg" alt="" class="absolute left-96 top-3 right-0 mx-auto smallstar2">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute top-80  left-96 right-0 mx-auto ">
+
+             <!-- smallstar1 --> 
+             <img src="images/image_17.svg" alt="" class="absolute left-96 -top-20 right-0 mx-auto smallstar1">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute top-9 right-8 left-32 mx-auto ">
+
+             <!-- smallstar1 --> 
+             <img src="images/image_17.svg" alt="" class="absolute left-96 -top-64 right-36 mx-auto smallstar1">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute -top-64 right-8 left-32 mx-auto ">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute -top-64 right-96 smallstar left-32 mx-auto ">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute -top-40 right-80 left-32 mx-auto ">
+
+             <!-- smallstar -->
+             <img src="images/image_27.svg" alt="" class="absolute -top-72 right-96 -left-36 mx-auto smallstar1">
+
+             </div>
+
+             
+
+            <!-- Move avatar -->
+            <img src="images/image_37.gif" alt="" width="150px" class="absolute right-44 -top-24">
+            <!-- Content box -->
+            <div class="relative  flex lg:flex-row gap-4 herosection2  justify-between w-full p-3 
+            bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% hs2cb ">
+
+
+                <!-- Left part -->
+                 <div class=" relative basis-11/12 rounded-2xl p-5 gifanimation">
+                    <img src="images/vid1 (1).gif" alt="" class="rounded-3xl herosection2">
+                 </div>
+
+                 <!-- Right part -->
+                  <div class="flex flex-col justify-center p-3 gap-4  basis-3/5">
+                    <h2 class="text-white font-extrabold text-[50px] uppercase tracking-tighter" >
+                        Make your group chats more fun
+                    </h2>
+
+                    <p class="text-white font-light text-[24px]">
+                        Use custom emoji, stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way.
+                    </p>
+
+                  </div>
+
+            </div>
+
+        </div>
+
+       </section>
+
+      <!-- hero section 3 -->
+       <section class="relative w-full mt-80">
+            <div class="w-[88%] flex relative items-center mx-auto hs2div p-0.5"> 
+                <img src="images/3D-Cartoon-Boy-PNG-Isolated-HD.png" alt="" width="150px" class="absolute  hidden lg:block -top-40 cartoonBoy -z-10">
+
+                <!-- <img src="images/3D-Cartoon-Boy-PNG-Isolated-HD.png" alt="" width="150px" class="absolute  hidden lg:block -top-40 rotate-180 -z-10"> -->
+                <!-- Content box -->
+                <div class="relative  flex lg:flex-row-reverse gap-4 herosection2  justify-between w-full p-3 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 ">
+
+                     <!-- BG stars images -->
+             <div class=" -z-50 ">
+                
+                <!-- smallstar -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 left-0 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-40 left-96 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-44 left-6 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-28 left-20 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-8 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -left-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 -left-28 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 left-64 smallstar">
+   
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-14 mx-auto">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute smallstar1 top-56 left-56">
+   
+                 <!-- smallstar -->
+                <img src="images/image_26.svg" alt="" class="absolute top-0 left-80 smallstar">
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 left-52 ">
+   
+   
+   
+                <!-- Right stars -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 right-0-0 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-5 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -right-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-52 right-64 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-96 ">
+   
+   
+   
+      <!-- center stars and small -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 right-0 left-0 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -left-32 top-0 right-0 mx-auto smallstar">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-32 right-0 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-48 top-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-20 right-48 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-96 top-3 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-80  left-96 right-0 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-20 right-0 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-9 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-64 right-36 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-96 smallstar left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-40 right-80 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-72 right-96 -left-36 mx-auto smallstar1">
+   
+                </div>
+    
+    
+                    <!-- Left part -->
+                     <div class=" relative basis-11/12 rounded-2xl p-5">
+                        <img src="images/vid4.gif" alt="" class="rounded-3xl herosection2">
+                     </div>
+    
+                     <!-- Right part -->
+                      <div class="flex flex-col justify-center pl-6 p-3 gap-4  basis-3/5">
+                        <h2 class="text-white font-extrabold text-[50px] uppercase tracking-tighter" >
+                            stream like you’re in the same room
+                        </h2>
+    
+                        <p class="text-white font-light text-[24px]">
+                            Use custom emoji, stickers, soundboard effects and more to add your personality to your voice, video, or text chat. Set your avatar and a custom status, and write your own profile to show up in chat your way.
+                        </p>
+    
+                      </div>
+    
+                </div>
+    
+            </div>
+    
+       </section>
+
+      <!-- hero section 4 -->
+       <section class="relative w-full mt-80 z-50">
+        <div class="w-[88%] flex relative items-center mx-auto hs2div p-0.5 z-60"> 
+            <!-- Cap img -->
+            <img src="images/image_64.webp" alt="" width="300px" class="absolute -right-14 -top-36 -mt-1 z-10">
+            <!-- Content box -->
+            <div class="relative  flex lg:flex-row gap-4 herosection2  justify-between w-full p-3 bg-gradient-to-r from-cyan-500 to-blue-700 ">
+
+                 <!-- BG stars images -->
+                 <div class=" -z-50 ">
+                
+                <!-- smallstar -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 left-0 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-40 left-96 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-44 left-6 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-28 left-20 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-8 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -left-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 -left-28 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 left-64 smallstar">
+   
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-14 mx-auto">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute smallstar1 top-56 left-56">
+   
+                 <!-- smallstar -->
+                <img src="images/image_26.svg" alt="" class="absolute top-0 left-80 smallstar">
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 left-52 ">
+   
+   
+   
+                <!-- Right stars -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 right-0-0 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-5 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -right-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-52 right-64 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-96 ">
+   
+   
+   
+      <!-- center stars and small -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 right-0 left-0 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -left-32 top-0 right-0 mx-auto smallstar">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-32 right-0 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-48 top-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-20 right-48 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-96 top-3 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-80  left-96 right-0 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-20 right-0 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-9 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-64 right-36 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-96 smallstar left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-40 right-80 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-72 right-96 -left-36 mx-auto smallstar1">
+   
+                </div>
+
+
+                <!-- Left part -->
+                 <div class=" relative basis-11/12 rounded-2xl p-5">
+                    <img src="images/vid3.gif" alt="" class="rounded-3xl herosection2">
+                 </div>
+
+                 <!-- Right part -->
+                  <div class="flex flex-col justify-center p-3 gap-4  basis-3/5">
+                    <h2 class="text-white font-extrabold text-[50px] uppercase tracking-tighter" >
+                        Hop in when you're free, no need to call
+                    </h2>
+
+                    <p class="text-white font-light text-[24px]">
+                        Easily hop in and out of voice or text chats without having to call or invite anyone, so your party chat lasts before, during, and after your game session.
+                    </p>
+
+                  </div>
+
+            </div>
+
+        </div>
+
+       </section>
+
+       <!-- Moving Banner Section -->
+       <Section class="w-full relative mt-40">
+        <div class=" w-full h-40 mx-auto items-center relative bg-gradient-to-t from-blue-700 to-blue-300 logos" >
+            
+            
+
+            <div class="flex space-x-32 mx-auto items-center logos-slide ">
+            
+            <h1 class="text-white font-extrabold text-[50px] uppercase movingBanner">Talk
+            </h1>
+            <img src="images/discord-main logo.png" alt="" width="120px" class="movingBanner" >
+
+            <h1 class="text-white font-extrabold text-[50px] uppercase movingBanner ">Play
+            </h1>
+            <img src="images/discord-main logo.png" alt="" width="120px" class="movingBanner">
+            
+            <h1 class="text-white font-extrabold text-[50px] uppercase movingBanner ">Chat
+            </h1>
+            <img src="images/discord-main logo.png" alt="" width="120px" class="movingBanner">
+
+            <h1 class="text-white font-extrabold text-[50px] uppercase movingBanner">Hang out
+            </h1>
+            <img src="images/discord-main logo.png" alt="" width="120px" class="movingBanner">
+
+            </div>
+           
+            
+
+        </div>
+       </Section>
+
+        <!-- hero section 4 -->
+        <section class="relative w-full mt-40">
+            <div class="w-[88%] flex relative items-center mx-auto hs2div p-0.5"> 
+                <!-- Content box -->
+                <div class="relative  flex lg:flex-row-reverse gap-4 herosection2  justify-between w-full p-3 bg-gradient-to-r from-cyan-500 to-blue-500 ">
+    
+                     <!-- BG stars images -->
+                     <div class=" -z-50 ">
+                
+                <!-- smallstar -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 left-0 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-40 left-96 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-44 left-6 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-28 left-20 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-8 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -left-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 -left-28 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 left-64 smallstar">
+   
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-14 mx-auto">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute smallstar1 top-56 left-56">
+   
+                 <!-- smallstar -->
+                <img src="images/image_26.svg" alt="" class="absolute top-0 left-80 smallstar">
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 left-52 ">
+   
+   
+   
+                <!-- Right stars -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 right-0-0 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-5 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -right-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-52 right-64 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-96 ">
+   
+   
+   
+      <!-- center stars and small -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 right-0 left-0 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -left-32 top-0 right-0 mx-auto smallstar">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-32 right-0 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-48 top-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-20 right-48 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-96 top-3 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-80  left-96 right-0 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-20 right-0 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-9 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-64 right-36 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-96 smallstar left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-40 right-80 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-72 right-96 -left-36 mx-auto smallstar1">
+   
+                </div>
+    
+
+                    <!-- Left part -->
+                     <div class=" relative basis-11/12 rounded-2xl p-5">
+                        <img src="images/vid2.gif" alt="" class="rounded-3xl herosection2 ">
+                     </div>
+    
+                     <!-- Right part -->
+                      <div class="flex flex-col justify-center pr-3  pl-6  gap-4  basis-3/5">
+                        <h2 class="text-white font-extrabold text-[50px] uppercase tracking-tighter" >
+                            See who's around to chill
+                        </h2>
+    
+                        <p class="text-white font-light text-[24px]">
+                            See who's around, playing games, or just hanging out. For supported games, you can see what modes or characters your friends are playing and directly join up.
+                        </p>
+    
+                      </div>
+    
+                </div>
+    
+            </div>
+    
+        </section>
+
+        <!-- hero section 5 -->
+        <section class="relative w-full mt-80">
+            <div class="w-[88%] flex relative items-center  mx-auto hs2div p-0.5"> 
+
+                 <!-- BG stars images -->
+                 <div class=" -z-50 ">
+                
+                <!-- smallstar -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 left-0 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-40 left-96 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-44 left-6 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-28 left-20 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-8 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -left-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 -left-28 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 left-64 smallstar">
+   
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-14 mx-auto">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute smallstar1 top-56 left-56">
+   
+                 <!-- smallstar -->
+                <img src="images/image_26.svg" alt="" class="absolute top-0 left-80 smallstar">
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 left-52 ">
+   
+   
+   
+                <!-- Right stars -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 right-0-0 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-5 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -right-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-52 right-64 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-96 ">
+   
+   
+   
+      <!-- center stars and small -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 right-0 left-0 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -left-32 top-0 right-0 mx-auto smallstar">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-32 right-0 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-48 top-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-20 right-48 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-96 top-3 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-80  left-96 right-0 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-20 right-0 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-9 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-64 right-36 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-96 smallstar left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-40 right-80 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-72 right-96 -left-36 mx-auto smallstar1">
+   
+                </div>
+
+                <!-- Img top layer -->
+                 <img src="images/image_109.webp" alt="" width="200px" height="200px" class="absolute -top-36 pt-6 right-80  z-10">
+
+                 <!-- <img src="images/image_110.webp" alt="" width="200px" height="200px" class="absolute opacity-10 -top-6 pt-6 right-80 pr-7  z-10"> -->
+
+                 <img src="images/image_111.webp" alt="" width="250px" height="200px" class="absolute -top-52 pt-6 -z-10 right-24">
+
+                 <!-- <img src="images/image_111.webp" alt="" width="250px" height="200px" class="absolute -top-52 pt-6 z-10 opacity-5 right-24"> -->
+
+                <!-- Content box -->
+                <div class="relative  flex lg:flex gap-4 herosection2  justify-between w-full p-3 bg-gradient-to-b from-blue-500 to-green-700 ">
+    
+    
+                    <!-- Left part -->
+                     <div class=" relative basis-11/12 rounded-2xl p-5">
+                        <img src="images/vid5.gif" alt="" class="rounded-3xl herosection2">
+                     </div>
+    
+                     <!-- Right part -->
+                      <div class="flex flex-col justify-center p-3 gap-4  basis-3/5">
+                        <h2 class="text-white font-extrabold text-[50px] uppercase tracking-tighter" >
+                            always have something to do together
+                        </h2>
+    
+                        <p class="text-white font-light text-[24px]">
+                            Watch videos, play built-in games, listen to music, or just scroll together and spam memes. Seamlessly text, call, video chat, and play games, all in one group chat.
+                        </p>
+    
+                      </div>
+    
+                </div>
+    
+            </div>
+    
+        </section>
+
+         <!-- hero section 6 -->
+         <section class="relative w-full mt-80">
+            <div class="w-[88%] flex relative items-center mx-auto hs2div p-0.5"> 
+
+                 <!-- BG stars images -->
+                 <div class=" -z-50 ">
+                
+                <!-- smallstar -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 left-0 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-40 left-96 ">
+   
+                <img src="images/image_17.svg" alt="" class="absolute -top-44 left-6 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-28 left-20 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-8 -left-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -left-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 -left-28 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-24 left-64 smallstar">
+   
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-14 mx-auto">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute  -top-12 left-96">
+   
+                <!-- smallstar -->
+                <img src="images/image_25.svg" alt="" class="absolute smallstar1 top-56 left-56">
+   
+                 <!-- smallstar -->
+                <img src="images/image_26.svg" alt="" class="absolute top-0 left-80 smallstar">
+   
+   
+                 <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 left-52 ">
+   
+   
+   
+                <!-- Right stars -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-0 right-0-0 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-5 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute top-20 -right-32 smallstar1">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 -right-20 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-52 right-64 ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -top-60 right-96 ">
+   
+   
+   
+      <!-- center stars and small -->
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-0 right-0 left-0 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute -left-32 top-0 right-0 mx-auto smallstar">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-32 right-0 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-48 top-0 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-20 right-48 left-32 mx-auto ">
+   
+                <!-- smallstar1 -->
+                <img src="images/image_17.svg" alt="" class="absolute left-96 top-3 right-0 mx-auto smallstar2">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-80  left-96 right-0 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-20 right-0 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute top-9 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar1 --> 
+                <img src="images/image_17.svg" alt="" class="absolute left-96 -top-64 right-36 mx-auto smallstar1">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-8 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-64 right-96 smallstar left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-40 right-80 left-32 mx-auto ">
+   
+                <!-- smallstar -->
+                <img src="images/image_27.svg" alt="" class="absolute -top-72 right-96 -left-36 mx-auto smallstar1">
+   
+                </div>
+                <!-- Content box -->
+                <div class="relative  flex lg:flex-row-reverse gap-4 herosection2  justify-between w-full p-3 bg-gradient-to-r from-violet-500 to-violet-700 ">
+    
+    
+                    <!-- Left part -->
+                     <div class=" relative basis-11/12 rounded-2xl p-5">
+                        <img src="images/ezgif.com-video-to-gif-converter.gif" width="1080px" alt="" class="rounded-3xl herosection2 ">
+                     </div>
+    
+                     <!-- Right part -->
+                      <div class="flex flex-col justify-center pr-3  pl-6  gap-4  basis-3/5">
+                        <h2 class="text-white font-extrabold text-[50px] uppercase tracking-tighter" >
+                            wherever YOU GAME, HANG OUT HERE
+                        </h2>
+    
+                        <p class="text-white font-light text-[24px]">
+                            On your PC, phone, or console, you can still hang out on Discord. Easily switch between devices and use tools to manage multiple group chats with friends.
+                        </p>
+    
+                      </div>
+    
+                </div>
+    
+            </div>
+    
+        </section>
+
+        <!-- Last hero section -->
+         <section class="w-full h-full relative mt-50">
+            <div class="w-[70%] items-center mx-auto  relative flex flex-col mt-48">
+
+                 
+                <h1 class="text-white font-extrabold text-[50px] uppercase tracking-tighter">
+                    YOU CAN'T SCROLL ANYMORE.
+                    <br>
+                </h1>
+
+                <h1 class="text-white font-extrabold text-[50px] uppercase tracking-tighter">
+                    Better go chat
+                    <br>
+                </h1>
+                <div class="pt-10">
+                    <button class="rounded-3xl bg-blue-700 text-white p-4 text-[18px] w-[300px] font-bold cursor-pointer hover:shadow-2xl hover:shadow-black">Download for Windows</button>
+                </div>
+            </div>
+            <!-- Discrod -->
+             <div class="w-full pt-20">
+                <img src="images/image_140.webp" alt="">
+
+                <div class="relative mx-auto items-center flex flex-col">
+                    
+                   <img src="images/image_142.webp" alt="" width="200px" class="absolute -top-60  mr-32 ">
+
+                   <img src="images/image_141.gif" alt="" width="600px" class="absolute -top-72 -z-10 mr-32 ">
+
+                   <img src="images/image_143.webp" width="110px" class="absolute -top-80 mt-3  animate-bounce mr-32">
+
+                </div>
+             </div>
+         </section>
+
+         <!-- Brief Section -->
+          <section class="w-full relative border-t-4 bg-gradient-to-b h-full from-purple-500 to-purple-900">
+            
+          <div class="w-[80%] mx-auto flex justify-between text-white text-[15px] mt-20">
+
+        
+            <!-- Left div -->
+             <div class="flex flex-col"></div>
+                <div class="flex items-start">
+                
+                    <label for=""></label>
+                <select name="English" class="bg-transparent" id="cars">
+                <option value="Cestina" class="bg-white text-black">Cestina</option>
+                <option value="Deutsch"  class="bg-white text-black">Deutsch</option>
+                <option value="English"  class="bg-white text-black">English</option>
+                <option value="English(UK)"  class="bg-white text-black">English(UK)</option>
+                <option value="Espanol"  class="bg-white text-black">Espanol</option>
+                <option value="Francais"  class="bg-white text-black">Francais</option>
+                <option value="Italiano"  class="bg-white text-black">Italiano</option>
+                <option value="Polski"  class="bg-white text-black">Polski</option>
+                <option value="Nederlands"  class="bg-white text-black">Nederlands</option>
+                <option value="Suomi"  class="bg-white text-black">Suomi</option>
+                <option value="Svenska"  class="bg-white text-black">Svenska</option>
+                </select>
+                </div>
+
+                <!-- <div class="flex">
+                    <img src="images/image_152.svg" alt="" width="">
+                    <img src="images/image_153.svg" alt="">
+                    <img src="images/image_154.svg" alt="">
+                    <img src="images/image_155.svg" alt="">
+                </div> -->
+
+
+             <!-- Right section -->
+
+                <div class="flex justify-between space-x-20">
+                     <!-- 2nd div -->
+                <div class="flex flex-col space-y-3 ">
+                    <p>Product</p>
+                    <br>
+                    <p>Download</p>
+                    <p>Nitro</p>
+                    <p>Status</p>
+                    <p>App Directory</p>
+                    <p>New Mobile Experience</p>
+                </div>
+
+                <!-- 3rd div -->
+                <div class="flex flex-col space-y-3 ">
+                    <p>Company</p>
+                    <br>
+                    <p>About</p>
+                    <p>Jobs</p>
+                    <p>Brand</p>
+                    <p>Newsroom</p>
+                </div>
+
+                <!-- 4th div -->
+                <div class="flex flex-col space-y-3">
+                    <p>Resources</p>
+                    <br>
+                    <p>College</p>
+                    <p>Support</p>
+                    <p>Safety</p>
+                    <p>Blog</p>
+                    <p>Feedback</p>
+                    <p>StreamKit</p>
+                    <p>Creators</p>
+                    <p>Community</p>
+                    <p>Developers</p>
+                    <p>Gaming</p>
+                    <p>Quests</p>
+                    <p>Official Third-Party Merch<p>
+                </div>
+
+                <!-- 5th div -->
+                <div class="flex flex-col space-y-3 ">
+                    <p>Policies</p>
+                    <br>
+                    <p>Terms</p>
+                    <p>Privacy</p>
+                    <p>Cookie Settings</p>
+                    <p>Guidelines</p>
+                    <p>Acknowledgements</p>
+                    <p>Licenses</p>
+                    <p>Company Information</p>
+                </div>
+
+            </div>
+
+               
+
+          </div>
+
+          
+        
+
+          </section>
+
+
+
+    
+          <script>
+        var copy = document.querySelector(".logos-slide").cloneNode(true);
+        document.querySelector(".logos").appendChild(copy);
+      </script>
+    
+</body>
+</html>
